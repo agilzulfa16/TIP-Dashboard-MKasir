@@ -1,36 +1,36 @@
-'use client'; 
+"use client";
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
-const WidgetContext = createContext(); 
+const WidgetContext = createContext();
 
 export function WidgetProvider({ children }) {
-  const initialSlots = Array(10).fill(null); 
-  const [widgets, setWidgets] = useState(initialSlots); 
+  const initialSlots = Array(10).fill(null);
+  const [widgets, setWidgets] = useState(initialSlots);
 
   function setWidget(slotIndex, widget) {
-    setWidgets(prev => {
+    setWidgets((prev) => {
       const updated = [...prev];
-      updated[slotIndex] = widget; 
+      updated[slotIndex] = widget;
       return updated;
     });
   }
 
   function removeWidget(slotIndex) {
-    setWidgets(prev => {
+    setWidgets((prev) => {
       const updated = [...prev];
-      updated[slotIndex] = null; 
+      updated[slotIndex] = null;
       return updated;
     });
   }
 
   return (
     <WidgetContext.Provider value={{ widgets, setWidget, removeWidget }}>
-      {children} 
+      {children}
     </WidgetContext.Provider>
   );
 }
 
 export function useWidgets() {
-  return useContext(WidgetContext); 
+  return useContext(WidgetContext);
 }

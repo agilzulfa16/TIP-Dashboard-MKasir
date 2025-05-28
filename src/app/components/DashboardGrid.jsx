@@ -2,7 +2,7 @@
 
 import { useWidgets } from "./WidgetContext";
 import WidgetBox from "./WidgetBox";
-import TopProductsChart from "./TopProductChart";
+import TopProductsChart from "./TopProductsChart";
 import TopProductsTable from "./TopProductsTable";
 
 // Konfigurasi layout untuk setiap slot widget (10 slot total)

@@ -1,7 +1,7 @@
 # Dokumentasi Dashboard MKASIR
 
-##Link Preview
-https://github.com/agilzulfa16/TIP-Dashboard-MKasir
+## Link Preview
+https://agilzulfa-mkasir.vercel.app/
 
 ## Deskripsi Aplikasi
 Dashboard MKASIR adalah aplikasi web manajemen kasir yang dibangun menggunakan React dan Next.js. Aplikasi ini menyediakan interface untuk monitoring bisnis dengan sistem widget yang dapat dikustomisasi, grafik penjualan, dan tabel produk terlaris.
